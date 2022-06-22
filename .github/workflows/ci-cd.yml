@@ -2,6 +2,7 @@ name: infra deploy
 
 on:
   push:
+    branches: [ master ]
   pull_request:
   workflow_dispatch:
 
@@ -29,8 +30,5 @@ jobs:
       - name: Terraform Plan
         run: terraform plan
 
-      # - name: Terraform Apply
-      #   run: terraform apply -auto-approve
-
-
-
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
