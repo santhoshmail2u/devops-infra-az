@@ -9,7 +9,7 @@ env:
   ARM_SUBSCRIPTION_ID: "f9ec3efc-a456-4f55-ac96-9bd4b39578a6"
   ARM_TENANT_ID: "3bd737dd-bc87-413a-a26d-b2336d2f90ce"
 
-job:
+jobs:
   deploy:
     name: deploy
     runs-on: ubuntu-latest
