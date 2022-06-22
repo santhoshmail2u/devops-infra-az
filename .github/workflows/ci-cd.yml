@@ -1,7 +1,7 @@
 name: infra deploy
 
 on:
-  workflow_dispach:
+  workflow_dispatch:
 
 env:
   ARM_CLIENT_ID: "e29b3059-5a91-4d15-9786-289502c694b9"
