@@ -1,1 +1,10 @@
-name: terraform pipeline
+name: Hello World Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+       - run: echo "Hello, World!"
