@@ -5,11 +5,15 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  id-token: write # Required for requesting the JWT
+  contents: read  # Required for actions/checkout
+
 env:
   ARM_CLIENT_ID: "23d4f819-c0d7-4465-a64e-666f81bdf2ef"
-  ARM_CLIENT_SECRET: ${{secrets.AZ_CLIENT_SECRET}}
   ARM_SUBSCRIPTION_ID: "fefb2c8c-7f96-4a73-816f-9b0722d2d305"
   ARM_TENANT_ID: "1abdabec-ba82-4839-98be-47802e8fad31"
+  ARM_USE_OIDC: true # Instructs Terraform to use OIDC
 
 jobs:
   deploy:
